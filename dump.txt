@@ -1,0 +1,75 @@
+<head>
+	<meta charset ="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5, user-scalable=yes" />
+	<link rel="stylesheet" href="style/style.css" />
+	<link rel="stylesheet" type="text/css" media="print" href="style/print.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+	<script src="../js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#season").change(function(){
+				var seasonid = $("#seasons").val();
+				$.ajax({
+					url: 'php/booking.class.php',
+					method: 'post',
+					data: 'seasonid=' + seasonid
+				}).done(function(routes){
+					console.log(routes);
+					routes = JSON.parse(routes);
+					$('#routes').empty();
+					routes.forEach(function(route){
+						$('#route').append('<option>' + route.name + '</option>')
+					})
+				})
+			})
+		})
+	</script>
+</head>
+<body>
+
+
+        <div class="container">
+		<h1 class="text-center">Create Booking </h1>
+		<hr>
+		<div class="row">
+		    <div class="col-md-6 col-md-offset-3">
+				<form role="form" method="post" action="">
+		        	<div class="row">
+		                <div class="form-group">
+		                    <label for="season">Season</label>
+		                    <select class="form-control" id="season" name="season">
+		                    	<option selected="" disabled="">Select Season</option>
+		                    	<?php 
+		                    		
+		                    		$seasons = loadSeasons();
+		                    		foreach ($seasons as $season) {
+		                    			echo "<option id='".$season['seasonid']."' value='".$season['seasonid']."'>".$season['startdate']."<h1> to </h1>".$season['enddate']."</option>";
+		                    		}
+									?>
+		                    </select>
+		                </div>
+		            </div>
+		            <div class="row">
+		                <div class="form-group">
+		                    <label for="books">Books</label>
+		                    <select class="form-control" id="books" name="books">
+		                    	
+		                    </select>
+		                </div>
+		            </div>
+		        </form>
+		    </div>
+		</div>
+	</div>
+
+
+        
+</body>
+<script src="js/article.js"></script>
+<script src="js/touch.js"></script>
+<script>
+</html>
+
+
+
+<!--
