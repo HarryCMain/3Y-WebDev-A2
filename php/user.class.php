@@ -12,7 +12,6 @@ class User {
 		$this->email="anon@anon.com";
 		$this->usertype=1;
 		$this->userhash=new UserHash();
-		$this->lastsession="";
 		//$this->dob = new DOB();
 	}
 	
