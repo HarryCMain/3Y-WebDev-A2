@@ -8,10 +8,11 @@
 		if(seasonid != "") {
 			$.ajax({
 				url:"php/bookings.php",
-				type:'POST',
+				type:'GET',
 				data:{seasonid:seasonid},
 				success:function(response) {
 					//var resp = $.trim(response);
+					console.log(response);
 					if(response != '') $("#route").removeAttr('disabled','disabled').html(response);
 					else $("#route, #sailing").attr('disabled','disabled').html("<option value=''>------- Select --------</option>");
 				}
@@ -30,7 +31,7 @@
 		if(routeid != "") {
 			$.ajax({
 				url:"php/bookings.php",
-				type:'POST',
+				type:'GET',
 				data:{routeid:routeid},
 				success:function(response) {
 					if(response != '') $("#sailing").removeAttr('disabled','disabled').html(response);

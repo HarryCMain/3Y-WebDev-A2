@@ -1,5 +1,4 @@
-<!doctype html>
-
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Bookings</title>
@@ -71,16 +70,17 @@ label {
 		//	$resultset=$result->fetch_all($style);
 		//	return $resultset;
 
-		//	$sql = "select seasonid, startdate from season";
-		//	$stmt = self::$db->prepare($sql);
-		//	$stmt->execute();
-		//	$result = $stmt->get_result();
-		//	$resultset=$result->fetch_all($style);
+			$sql = "select seasonid, startdate from season";
+			$stmt = self::$db->prepare($sql);
+			$stmt->execute();
+			$result = $stmt->get_result();
+			$resultseason=$result->fetch_all($style);
 
-			$sqlseason = $connect -> prepare("select seasonid, startdate from season");
-					$sqlseason -> execute(); 
-				$resultseason = $sql -> fetch();
-//	echo $resultset;
+		//	$sqlseason = $connect -> prepare("select seasonid, startdate from season");
+			//		$sqlseason -> execute(); 
+			//	$resultseason = $sql -> fetch();
+			//	error_log("where",0);
+	echo $resultseason;
 			echo"	<select id='season' onChange='check(this);'>";
 			while($row_season = mysqli_fetch_array($resultseason))
 			{
@@ -99,7 +99,7 @@ label {
 
 		</div>
 	</div>
-	<footer>Copyright &copy; Someone 2020</footer>
+	<footer>Copyright &copy; Someone 2021</footer>
 </body>
 
 <script>

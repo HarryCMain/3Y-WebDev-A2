@@ -1,21 +1,4 @@
-<?php /*
-	require_once("db.php");
 
-	if(isset($_POST['seasonid'])) {
-		$stmt = $conn->prepare("SELECT * FROM route WHERE seasonid = " . $_POST['seasonid']);
-		$stmt->execute();
-		$routes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-		echo json_encode($routes);
-	}
-
-	function loadSeasons() {
-		$stmt = $conn->prepare("SELECT * FROM season");
-		$stmt->execute();
-		$authors = $stmt->fetchAll(PDO::FETCH_ASSOC);
-		return $seasons;
-	}
-*/
- ?>
 
 <?php include('bookingconnection.php');?>
 
@@ -49,19 +32,7 @@ if (isset($_POST['seasonid'])) {
 	} else {
 		echo '<option value="">No Record</option>';
 	}
+}
 
 
-
-/*
-		public function getUserById($userid, $style=MYSQL_ASSOC) {
-		$this->sql="select * from passenger where passengerid = ?";
-		$this->stmt = self::$db->prepare($this->sql);
-		$this->stmt->bind_param("i",$userid);
-		$this->stmt->execute();
-		$result = $this->stmt->get_result();
-		$resultset=$result->fetch_all($style);
-		return $resultset;
-		echo"Gubi";
-	}
-	*/
 	?>
