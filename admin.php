@@ -12,10 +12,13 @@
 			//echos admin navbar with advanced edit options
 			$page = new Page(4);
 		?>
-		<nav>
-			<ul class="navbar">
-				<?php echo $page->getMenu(); ?>
-			</ul>
+	<nav class="navbar">
+					<div class="navbar-nav">
+					<?php echo $page->getMenu(); 
+					//gets navbar
+					?>
+					</div>
+
 		</nav>
 			<form method="post" action="editother.php">
 				<?php

@@ -20,9 +20,12 @@
 			$page = new Page(0);
 		?>
 		<nav class="navbar">
-			<ul class="navbar-nav">
-				<?php echo $page->getMenu(); ?>
-			</ul>
+					<div class="navbar-nav">
+					<?php echo $page->getMenu(); 
+					//gets navbar
+					?>
+					</div>
+
 		</nav>
     <main>
 	<h1>Sailings</h1>

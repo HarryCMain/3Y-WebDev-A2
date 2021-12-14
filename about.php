@@ -11,9 +11,9 @@
 </head>
 <body>
 	<div id="banner"></div>
-	<h1>Home</h1>	
+	<h1>About</h1>	
 	
-		<p>Contact us</p>
+		<p>About us</p>
 		<nav class="navbar">
 					<div class="navbar-nav">
 					<?php echo $page->getMenu(); 
@@ -23,7 +23,7 @@
 
 		</nav>
 		
-		<h1><b>we don't exist so you can't contact us</b></h1>
+		<h1><b>we don't exist so you can't tell our past</b></h1>
 
 
     <footer>Copyright &copy; Someone 2021</footer>

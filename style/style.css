@@ -7,6 +7,15 @@
     --bg-secondary: #141418;
     --transition-speed: 600ms;
   }
+
+
+*{
+	list-style: none;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
   
   body {
     color: black;
@@ -14,19 +23,20 @@
     margin: 0;
     padding: 0;
     background:
-    url('https://d1xw84ija6gjgy.cloudfront.net/production/412758d043dd247bddea07c7ec558c31/conversions/HD.jpg');
+    url('../assets/bg.jpg');
     width: 80%;
     height: 400px;
     background-size: cover;
     color: white;
-    padding: 20px;
+    padding: 60px;
+    padding-left: 15%;
     background-repeat: no-repeat;
     background-size: auto;
   }
   
   
   body::-webkit-scrollbar {
-    width: 0.25rem;
+    width: 0.5rem;
   }
   
   body::-webkit-scrollbar-track {
@@ -39,34 +49,44 @@
   
   main {
     margin-block: auto;
-    margin-left: 5rem;
+    margin-left: 1rem;
     padding: 1rem;
+    width: calc(100% - 250px);
   }
 
-  .h1 {
-    margin-left: 5rem;
-}
-  
+ 
   .navbar {
-    position: fixed;
+    position: absolute;
+    width: 10%;
     background-color: var(--bg-primary);
     transition: width 600ms ease;
     overflow: scroll;
     align-items: left;
+    padding: 2rem;
+    padding-left: 10rem;
+    padding-right: 5rem;
+    left: 0;
+    margin:0 !important;
+    padding: 0px !important;
+    overflow-x: hidden;
   }
   
   .navbar-nav {
     list-style: none;
-    padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
   }
   
   .nav-item {
     width: 100%;
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   
   .nav-item:last-child {
@@ -141,25 +161,17 @@
   .navbar:hover .logo svg {
     transform: rotate(-180deg);
   }
-  
-@media only screen and (min-width: 1080px){
-  body {
-    color: black;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    background:
-    url('../assets/bg.jpg');
-    width: 80%;
-    height: 400px;
-    background-size: cover;
-    color: white;
-    padding: 20px;
-    background-repeat: no-repeat;
-    background-size: auto;
+
+  .maincontent {
+    width: calc(100% - 250px);
   }
 
+  .h1 {
+    margin-left: 10rem;
+    padding-left: 20%;
+    background-color: #000000;
 }
+  
 
   /* Small screens */
   @media only screen and (max-width: 600px) {

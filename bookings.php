@@ -38,13 +38,15 @@ label {
 </head>
 
 <body>
-<h1>Sailings</h1>
+<nav class="navbar">
+					<div class="navbar-nav">
+					<?php echo $page->getMenu(); 
+					//gets navbar
+					?>
+					</div>
 
-		<nav>
-			<ul class="navbar">
-				<?php  echo $page->getMenu(); ?>
-			</ul>
 		</nav>
+<h1>Bookings</h1>
 
 
 

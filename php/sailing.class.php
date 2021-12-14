@@ -1,7 +1,7 @@
 <?php
 require_once("sailingCRUD.class.php");
 
-class sailing {
+class Sailing {
 	private $sailingid, $dateofsail,$departuretime,$arrivaltime, $capacity, $nreserved, $routeid;
 	private $sailings=[];
 

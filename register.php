@@ -12,9 +12,13 @@
 		$page = new Page(0);
 	?>
 	<nav>
-		<ul class="navbar">
-			<?php echo $page->getMenu(); ?>
-		</ul>
+	<ul class="navbar">
+					<div class="navbar-nav">
+					<?php echo $page->getMenu(); 
+					//gets navbar
+					?>
+					</div>
+				</ul>
 	</nav>
 	<script src="js/userform.js"></script>
 <form method="post" id="regform" action="reguser.php">
