@@ -17,4 +17,15 @@ class SailingCRUD {
 		$resultset=$result->fetch_all($style);
 		return $resultset;
 	}
+
+	public function getSailingByID($sailingid, $style=MYSQL_ASSOC) {
+		$this->sql="select * from sailing where sailingid = ?";
+		$this->stmt = self::$db->prepare($this->sql);
+		$this->stmt->bind_param("i",$sailingid);
+		$this->stmt->execute();
+		$result = $this->stmt->get_result();
+		$resultset=$result->fetch_all($style);
+		return $resultset;
+		echo"Gsbi";
+	}
 }

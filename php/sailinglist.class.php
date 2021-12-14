@@ -9,7 +9,7 @@ class SailingsList {
 		$this->getUserList();
 	}
 	
-	public function getUserList($orderby="sailingid", $style=MYSQLI_ASSOC) {
+	public function getSailingList($orderby="sailingid", $style=MYSQLI_ASSOC) {
 		$this->sailings=$this->source->getAllSailings($orderby, $style);
 	}
 	
