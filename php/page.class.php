@@ -37,12 +37,13 @@ class Page {
 	
 	public function login($email, $userpass) {
 		session_regenerate_id();
-		echo $email,$userpass;
+		//echo $email,$userpass;
 		if($this->getUser()->authNamePass($email,$userpass)) {
 			echo "<br />Authenticated";
 			$this->getUser()->storeSession($this->getUser()->getUserid(),session_id());
 			$_SESSION['userid']=$this->getUser()->getUserid();
 			//echo("session"+$_SESSION);
+			echo("login complete");
 			// userlevel logic here
 			
 			switch($this->getUser()->getUsertype()) {
