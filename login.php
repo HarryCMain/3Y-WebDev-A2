@@ -12,11 +12,14 @@
 		require_once("php/page.class.php");
 		$page = new Page(0);
 	?> 
-	<nav>
-		<ul class="navbar">
-			<?php echo $page->getMenu(); ?>
-		</ul>
-	</nav>
+	<nav class="navbar">
+					<div class="navbar-nav">
+					<?php echo $page->getMenu(); 
+					//gets navbar
+					?>
+					</div>
+
+		</nav>
 	<form method="post" action="processlogin.php">
 		<label for="email">Email</label><input type="email" name="email" id="email" /><br />
 		<label for="password">Password</label><input type="password" name="userpass" id="userpass" /><br />
