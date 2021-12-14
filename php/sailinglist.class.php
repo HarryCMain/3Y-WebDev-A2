@@ -5,7 +5,7 @@ class SailingsList {
 	private $sailings=[], $source;
 	
 	public function __construct() {
-		$this->source = new SailingCrud();
+		$this->source = new SailingCRUD();
 		$this->getUserList();
 	}
 	
