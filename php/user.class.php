@@ -110,7 +110,7 @@ public function getUserByEmail($email) {
 		} 
 		return $haveuser;
 	}
-	public function authNamePass($email, $userhash) {
+	public function authNamePass($email, $userpass) {
 		$authenticated=$this->getUserByEmail($email);
 		if($authenticated) {
 			$authenticated=$this->userhash->testPass($userhash);
