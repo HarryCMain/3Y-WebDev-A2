@@ -9,6 +9,7 @@
 		<?php
 			require_once("php/page.class.php");
 			require_once("php/userlist.class.php");
+			//echos admin navbar with advanced edit options
 			$page = new Page(4);
 		?>
 		<nav>
@@ -18,6 +19,7 @@
 		</nav>
 			<form method="post" action="editother.php">
 				<?php
+					//lists all users
 					$userlist = new UserList();
 					echo $userlist;
 				?>
