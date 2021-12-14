@@ -71,15 +71,16 @@ label {
 		//	return $resultset;
 
 			$sql = "select seasonid, startdate from season";
-			$stmt = self::$db->prepare($sql);
-			$stmt->execute();
-			$result = $stmt->get_result();
-			$resultseason=$result->fetch_all($style);
+		//	$stmt = self::$db->prepare($sql);
+		//	$stmt->execute();
+		//	$result = $stmt->get_result();
+		//	$resultseason=$result->fetch_all($style);
 
 		//	$sqlseason = $connect -> prepare("select seasonid, startdate from season");
 			//		$sqlseason -> execute(); 
 			//	$resultseason = $sql -> fetch();
 			//	error_log("where",0);
+			echo "past db";
 	echo $resultseason;
 			echo"	<select id='season' onChange='check(this);'>";
 			while($row_season = mysqli_fetch_array($resultseason))
